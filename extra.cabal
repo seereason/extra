@@ -36,7 +36,7 @@ library
         filepath,
         process,
         time
-    if !arch(javascript)
+    if !(arch(javascript) || arch(wasm32))
         build-depends: clock >= 0.7
     if !os(windows)
         build-depends: unix
